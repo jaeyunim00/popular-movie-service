@@ -1,0 +1,170 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Climate+Crisis&family=Shantell+Sans:wght@300;400;500;600&display=swap");
+
+:root {
+  --black: #353535;
+  --white: #ffffff;
+  --gray: #d9d9d9;
+  --blue: #284b63;
+  --green: #3c6e71;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-size: 45px;
+}
+
+body {
+  background-image: url(../imgs/darkness.png);
+  color: var(--white);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+header {
+  background-color: transparent;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  font-weight: 700;
+}
+
+header span {
+  margin-right: 20px;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+.swiper {
+  width: 1300px;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ######################## */
+
+.movies {
+  background-color: #353535;
+  perspective: 1300px;
+  height: 600px;
+  top: 100px;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movies-wrap {
+  animation-play-state: running;
+  animation: ani 15s linear infinite;
+  height: 470px;
+  width: 360px;
+  left: 45%;
+  position: absolute;
+  top: 5%;
+  /* transform: translate(-40%); */
+  transform-style: preserve-3d;
+}
+
+.movie {
+  border: 3px solid black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.movie:nth-child(1) {
+  transform: rotateY(0deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(2) {
+  transform: rotateY(30deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(3) {
+  transform: rotateY(60deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(4) {
+  transform: rotateY(90deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(5) {
+  transform: rotateY(120deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(6) {
+  transform: rotateY(150deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(7) {
+  transform: rotateY(180deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(8) {
+  transform: rotateY(210deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(9) {
+  transform: rotateY(240deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(10) {
+  transform: rotateY(270deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(11) {
+  transform: rotateY(300deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+.movie:nth-child(12) {
+  transform: rotateY(330deg) translateZ(-955px);
+  backface-visibility: hidden;
+}
+
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1turn);
+  }
+}
