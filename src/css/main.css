@@ -13,12 +13,31 @@
   box-sizing: border-box;
 }
 
+a {
+  color: var(--white);
+  text-decoration-line: none;
+}
+
+span {
+  font-size: 0px;
+}
+
 .material-symbols-outlined {
   font-size: 45px;
 }
 
 body {
-  background-image: url(../imgs/darkness.png);
+  background-image: linear-gradient(
+    to right top,
+    #a19898,
+    #918589,
+    #7e737d,
+    #686373,
+    #4d5567,
+    #2f4858
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
   color: var(--white);
   font-family: "Chakra Petch", sans-serif;
 }
@@ -32,72 +51,77 @@ header {
 }
 
 header span {
+  color: var(--blue);
   margin-right: 20px;
 }
 
 header h1 {
+  color: var(--gray);
   font-size: 30px;
-}
-
-.swiper {
-  width: 1300px;
-  height: 500px;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* ######################## */
 
 .movies {
-  background-color: #353535;
-  perspective: 1300px;
-  height: 600px;
-  top: 100px;
+  /* background-image: url(../imgs/darkness.png); */
+  /* background-color: #353535; */
+  perspective: 1200px;
+  height: 800px;
+  top: 6vh;
   width: 100vw;
   position: fixed;
-  display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  overflow: hidden;
 }
 
 .movies-wrap {
   animation-play-state: running;
-  animation: ani 15s linear infinite;
+  animation: ani 50s linear infinite;
   height: 470px;
   width: 360px;
   left: 45%;
   position: absolute;
   top: 5%;
-  /* transform: translate(-40%); */
+  transform: translate(-40%);
   transform-style: preserve-3d;
 }
 
 .movie {
-  border: 3px solid black;
+  border: 10px ridge var(--gray);
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 700px;
   margin-bottom: 30px;
   padding: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition: 0.2s ease-in-out;
+}
+
+.movie:hover {
+  width: 500px;
+  height: 800px;
+  position: absolute;
+  left: -40px;
+  top: -40px;
+}
+
+.movie div {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie img {
+  margin-bottom: 20px;
+}
+
+.movie h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 0;
 }
 
 .movie:nth-child(1) {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
-import SwipApp from "../components/Swiper";
+
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
