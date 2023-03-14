@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.js": "/popular-movie-service/static/js/main.08b6eb27.js",
+    "main.css": "/popular-movie-service/static/css/main.f2c17b0b.css",
+    "main.js": "/popular-movie-service/static/js/main.8c6bd282.js",
+    "static/media/beautiful-shining-stars-night-sky.jpg": "/popular-movie-service/static/media/beautiful-shining-stars-night-sky.a7257e7fbff66d7fb7cc.jpg",
+    "static/media/3d-hyperspace-background-with-warp-tunnel-effect.jpg": "/popular-movie-service/static/media/3d-hyperspace-background-with-warp-tunnel-effect.ef943886c70bd3fdada2.jpg",
     "index.html": "/popular-movie-service/index.html",
-    "main.08b6eb27.js.map": "/popular-movie-service/static/js/main.08b6eb27.js.map"
+    "main.f2c17b0b.css.map": "/popular-movie-service/static/css/main.f2c17b0b.css.map",
+    "main.8c6bd282.js.map": "/popular-movie-service/static/js/main.8c6bd282.js.map"
   },
   "entrypoints": [
-    "static/js/main.08b6eb27.js"
+    "static/css/main.f2c17b0b.css",
+    "static/js/main.8c6bd282.js"
   ]
 }
