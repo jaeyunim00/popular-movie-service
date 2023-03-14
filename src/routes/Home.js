@@ -24,6 +24,7 @@ const Home = () => {
 
   return (
     <div>
+      {/* <div class="snowflake"></div> */}
       <header>
         <span class="material-symbols-outlined">
           airline_seat_recline_extra

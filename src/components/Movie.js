@@ -11,12 +11,14 @@ const Movie = ({ id, medium_cover_image, url, summary, title, genres }) => {
         <h2>
           <Link to={`/movie/${id}`}>{title}</Link>
         </h2>
-        {/* <p>{summary.length > 320 ? summary.slice(0, 320) + "..." : summary}</p>
-        <ul>
+        {/* <p>{summary.length > 100 ? summary.slice(0, 100) + "..." : summary}</p> */}
+        <ul className="genres">
           {genres.map((g, index) => (
-            <li key={g}>{g}</li>
+            <li className="genre" key={g}>
+              {g}
+            </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </div>
   );
