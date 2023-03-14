@@ -1,12 +1,15 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
 
+/* GLBOAL */
 :root {
   --black: #353535;
   --white: #ffffff;
   --gray: #d9d9d9;
   --blue: #284b63;
   --green: #3c6e71;
+  --tag-box-color: rgba(255, 255, 255, 0.15);
+  --tag-font-color: var(--white);
 }
 
 * {
@@ -18,31 +21,13 @@ a {
   text-decoration-line: none;
 }
 
-span {
-  font-size: 0px;
+.hidden {
+  display: none;
 }
 
 .material-symbols-outlined {
   font-size: 45px;
 }
-
-/* .snowflake {
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  position: absolute;
-  top: -8px;
-  animation: fall 10s linear;
-}
-
-@keyframes fall {
-  form {
-  }
-  to {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-} */
 
 body {
   background-image: url(../imgs/beautiful-shining-stars-night-sky.jpg);
@@ -50,31 +35,70 @@ body {
   height: 100vh;
   color: var(--white);
   font-family: "Open Sans", sans-serif;
+  min-width: 500px;
+}
+
+/* ---------------------- */
+
+.home {
+  display: flex;
+  justify-content: center;
 }
 
 header {
-  background-color: transparent;
   display: flex;
   padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--white);
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.15);
+  /* box-shadow: var(--white) 0px 20px 30px -10px; */
+  box-shadow: var(--gray) 0px 0px 30px 4px;
+}
+
+header span {
+  margin-right: 20px;
+}
+
+header div:first-child {
+  display: flex;
   align-items: center;
   font-weight: 700;
 }
 
-header span {
+header div:first-child span {
   color: var(--blue);
-  margin-right: 20px;
 }
 
 header h1 {
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 30px;
+}
+
+header div:last-child {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+header .menu-icon span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header div:last-child span {
+  padding: 7px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 /* ######################## */
 
 .movies {
-  /* background-image: url(../imgs/darkness.png); */
-  /* background-color: #353535; */
   perspective: 1200px;
   height: 800px;
   top: 6vh;
@@ -120,11 +144,6 @@ header h1 {
   left: -40px;
   top: -40px;
 }
-
-/* .movie div {
-  display: flex;
-  flex-direction: column;
-} */
 
 .movie img {
   margin-bottom: 20px;
@@ -210,8 +229,8 @@ header h1 {
 
 .genre {
   padding: 7px;
-  background-color: var(--gray);
-  color: var(--black);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
   margin-right: 10px;
   margin-bottom: 10px;
   font-weight: 700;
@@ -223,5 +242,15 @@ header h1 {
   }
   100% {
     transform: rotateY(1turn);
+  }
+}
+
+@media (max-width: 800px) {
+  header div:last-child {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
   }
 }

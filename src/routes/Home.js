@@ -23,13 +23,23 @@ const Home = () => {
   console.log(movies);
 
   return (
-    <div>
+    <div className="home">
       {/* <div class="snowflake"></div> */}
       <header>
-        <span class="material-symbols-outlined">
-          airline_seat_recline_extra
-        </span>
-        <h1>ja2yun000</h1>
+        <div>
+          <span class="material-symbols-outlined">
+            airline_seat_recline_extra
+          </span>
+          <h1>ja2yun000</h1>
+        </div>
+        <div className="menu-icon hidden">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div>
+          <span>HOME</span>
+          <span>SEARCH</span>
+          <span>🎥 MY MOVIE</span>
+        </div>
       </header>
       {loading ? (
         <div>Loading</div>
