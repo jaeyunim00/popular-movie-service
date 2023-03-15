@@ -10,4 +10,4 @@
 
 (3/15)Detail.js 완료
 
-<img width="1424" alt="image" src="https://user-images.githubusercontent.com/71920791/225222058-61b7ab8a-af57-4185-b8fa-f37aa251e60f.png">
+<img width="1422" alt="image" src="https://user-images.githubusercontent.com/71920791/225224160-bc3d2940-ab4e-4093-a525-42ee52aa145c.png">

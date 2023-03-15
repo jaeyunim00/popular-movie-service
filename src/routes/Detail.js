@@ -42,7 +42,7 @@ const Detail = () => {
         </div>
       </header>
       {loading ? (
-        <div className="loading">loading...</div>
+        <span className="loading">loading...</span>
       ) : (
         <div>
           <div
