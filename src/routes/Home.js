@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -36,15 +37,17 @@ const Home = () => {
           <span class="material-symbols-outlined">menu</span>
         </div>
         <div>
-          <span>HOME</span>
-          <span>SEARCH</span>
+          <Link to={`/`}>
+            <span>HOME</span>
+          </Link>
           <span>🎥 MY MOVIE</span>
         </div>
       </header>
       {loading ? (
-        <div>Loading</div>
+        <div className="loading">loading...</div>
       ) : (
         <div className="movies">
+          <div className="movies-line"></div>
           <div className="movies-wrap">
             {movies.slice(0, 12).map((movie) => (
               <Movie

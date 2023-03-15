@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Detail = () => {
   const [loading, setLoading] = useState(true);
@@ -22,27 +23,54 @@ const Detail = () => {
   console.log(movie);
 
   return (
-    <div>
+    <div className="movie_detail">
+      <header>
+        <div>
+          <span class="material-symbols-outlined">
+            airline_seat_recline_extra
+          </span>
+          <h1>ja2yun000</h1>
+        </div>
+        <div className="menu-icon hidden">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div>
+          <Link to={`/`}>
+            <span>HOME</span>
+          </Link>
+          <span>🎥 MY MOVIE</span>
+        </div>
+      </header>
       {loading ? (
-        <div>loading...</div>
+        <div className="loading">loading...</div>
       ) : (
         <div>
+          <div
+            className="movie_background"
+            style={{ backgroundImage: `url(${movie.background_image})` }}
+          ></div>
+          <div className="movie_image">
+            <img src={movie.medium_cover_image} />
+          </div>
           <div className="movie_content">
-            <span>ja2yun000</span>
             <h2>{movie.title}</h2>
             <div className="info">
-              <span>{movie.rating}</span>
-              <span>{movie.year}</span>
-              <ul>
+              <div className="info_rating">
+                <span class="material-symbols-outlined rating">mood</span>
+                <span>{movie.rating}</span>
+              </div>
+              <span>Released: {movie.year}</span>
+              <ul className="genres">
                 {movie.genres.map((item) => (
-                  <li>{item}</li>
+                  <li className="genre">{item}</li>
                 ))}
               </ul>
             </div>
-            <div>{movie.description_full}</div>
-          </div>
-          <div className="movie_image">
-            <img src={movie.medium_cover_image} />
+            <div className="movie_des">
+              {movie.description_full.length > 300
+                ? movie.description_full.slice(0, 300) + "..."
+                : movie.description_full}
+            </div>
           </div>
         </div>
       )}

@@ -10,6 +10,8 @@
   --green: #3c6e71;
   --tag-box-color: rgba(255, 255, 255, 0.15);
   --tag-font-color: var(--white);
+  --main-container-shadow: var(--blue) 0px 0px 30px 4px;
+  --main-item-shadow: var(--blue) 0px 20px 30px -10px;
 }
 
 * {
@@ -29,6 +31,10 @@ a {
   font-size: 45px;
 }
 
+.material-symbols-outlined.rating {
+  font-size: 25px;
+}
+
 body {
   background-image: url(../imgs/beautiful-shining-stars-night-sky.jpg);
   background-size: contain;
@@ -43,20 +49,32 @@ body {
 .home {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 header {
+  position: absolute;
+  top: 0;
   display: flex;
   padding: 20px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--white);
-  border-left: 1px solid var(--white);
-  border-right: 1px solid var(--white);
   width: 70%;
   background-color: rgba(255, 255, 255, 0.15);
-  /* box-shadow: var(--white) 0px 20px 30px -10px; */
-  box-shadow: var(--gray) 0px 0px 30px 4px;
+  box-shadow: var(--main-container-shadow);
+}
+
+.movies-line {
+  position: absolute;
+  top: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--main-container-shadow);
 }
 
 header span {
@@ -133,7 +151,7 @@ header div:last-child span {
   background-color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: var(--white) 0px 20px 30px -10px;
+  box-shadow: var(--main-item-shadow);
   transition: 0.2s ease-in-out;
 }
 
@@ -143,6 +161,7 @@ header div:last-child span {
   position: absolute;
   left: -40px;
   top: -40px;
+  border: 3px solid var(--gray);
 }
 
 .movie img {
@@ -253,4 +272,78 @@ header div:last-child span {
   .menu-icon {
     display: block;
   }
+}
+
+.movie_detail {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie_detail > div {
+  background-color: var(--tag-box-color);
+  padding: 30px;
+  display: flex;
+  box-shadow: var(--main-container-shadow);
+}
+
+.loading {
+  background-color: var(--tag-box-color);
+  padding: 30px;
+  display: flex;
+  box-shadow: var(--main-container-shadow);
+  font-weight: 700;
+  color: var(--tag-font-color);
+}
+
+.movie_image {
+}
+
+.movie_image img {
+  box-shadow: var(--main-item-shadow);
+}
+
+.movie_content {
+  padding: 50px;
+}
+
+.movie_content h2 {
+  font-size: 40px;
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 10px;
+}
+
+.info .info_rating {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.info_rating span:first-child {
+  margin-right: 10px;
+}
+
+.info_rating span:last-child {
+  font-size: 20px;
+}
+
+.movie_des {
+  border: 1px solid var(--white);
+  padding: 10px;
+  box-shadow: var(--main-item-shadow);
+  line-height: 1.5;
+  margin-top: 10px;
 }
