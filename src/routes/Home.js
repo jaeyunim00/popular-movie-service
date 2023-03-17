@@ -25,7 +25,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* <div class="snowflake"></div> */}
       <header>
         <div>
           <span class="material-symbols-outlined">
@@ -40,7 +39,6 @@ const Home = () => {
           <Link to={`/`}>
             <span>HOME</span>
           </Link>
-          <span>🎥 MY MOVIE</span>
         </div>
       </header>
       {loading ? (

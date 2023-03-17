@@ -38,7 +38,6 @@ const Detail = () => {
           <Link to={`/`}>
             <span>HOME</span>
           </Link>
-          <span>🎥 MY MOVIE</span>
         </div>
       </header>
       {loading ? (
